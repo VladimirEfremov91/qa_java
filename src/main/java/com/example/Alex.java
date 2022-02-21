@@ -4,7 +4,6 @@ import java.util.List;
 
 public class Alex extends Lion {
 
-
     public Alex(Feline feline) throws Exception {
         super("Самец", feline);
     }
@@ -12,6 +11,7 @@ public class Alex extends Lion {
     public List<String> getFriend() {
         return List.of("Марти", "Глория", "Мелман");
     }
+
     public String getPlaceOfLiving() {
         return "Нью-Йоркский зоопарк";
     }

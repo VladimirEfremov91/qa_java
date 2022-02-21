@@ -5,9 +5,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-
 import java.util.List;
-
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -18,7 +16,6 @@ public class CatTest {
 
     @Test
     public void getSoundCorrect() {
-        //AAA - Arrange - Act - Assert : Подготовить данные - Выполнить - Проверить
         String expectedSound = "Мяу";
         Cat cat = new Cat(feline);
         String actualSound = cat.getSound();

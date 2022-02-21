@@ -20,17 +20,15 @@ public class Lion {
         }
     }
 
-
     public int getKittens() {
         return feline.getKittens();
     }
-
 
     public boolean doesHaveMane() {
         return hasMane;
     }
 
     public List<String> getFood() throws Exception {
-        return feline.eatMeat();
+        return feline.getFood("Хищник");
     }
 }

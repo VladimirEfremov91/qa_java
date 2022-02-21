@@ -13,6 +13,7 @@ public class FelineParameterizedTest {
         this.kittensCount = kittensCount;
         this.expectedKittensCount = expectedKittensCount;
     }
+
     @Parameterized.Parameters
     public static Object[][] getKittensCount() {
         return new Object[][] {
@@ -21,10 +22,11 @@ public class FelineParameterizedTest {
                 {0, 0},
         };
     }
+
     @Test
     public void getKittenCountCorrect() {
         Feline feline = new Feline();
         int actual = feline.getKittens(kittensCount);
         Assert.assertEquals(expectedKittensCount, actual);
-        }
+    }
 }

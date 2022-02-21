@@ -30,7 +30,7 @@ public class LionTest {
     public void getFoodCorrect () throws Exception {
         List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
         Lion lion = new Lion("Самец", feline);
-        Mockito.when(feline.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
+        Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         List<String> actual = lion.getFood();
         assertEquals(expectedFood, actual);
     }
@@ -39,10 +39,13 @@ public class LionTest {
     public void doesHaveManeExceptionCorrect () {
         Exception exception = null;
         String expected = "Иcпользуйте допустимые значения пола животного - самец или самка";
-        try { new Lion("Бесполый", feline); }
-        catch (Exception ex) { exception = ex; }
+        try {
+            new Lion("Бесполый", feline);
+        }
+        catch (Exception ex) {
+            exception = ex;
+        }
         assertNotNull(exception);
         assertEquals(exception.getMessage(), expected);
     }
-
 }
